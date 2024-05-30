@@ -11,6 +11,8 @@ const viewbtn = document.getElementById("buttonview");
 const sellbtn = document.getElementById("buttonsell");
 const topcards = document.getElementById("topcards");
 const sellcards = document.getElementById("sellcards");
+const shopbtn = document.getElementById("shopbtn");
+const mensbtn = document.getElementById("mensbtn");
 
 searchIcon.addEventListener("click", () => {
   searchbar.classList.remove("hidden");
