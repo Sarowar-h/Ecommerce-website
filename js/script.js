@@ -12,7 +12,42 @@ const sellbtn = document.getElementById("buttonsell");
 const topcards = document.getElementById("topcards");
 const sellcards = document.getElementById("sellcards");
 const shopbtn = document.getElementById("shopbtn");
+const dropdown = document.getElementById("dropdown");
 const mensbtn = document.getElementById("mensbtn");
+const menitem = document.getElementById("menitems");
+const mobileshopbtn = document.getElementById("mobileshopbtn");
+const mobiledropdown = document.getElementById("mobiledropdown");
+const mobilemensbtn = document.getElementById("mobilemensbtn");
+const mobilemenitem = document.getElementById("mobilemenitems");
+
+mobileshopbtn.addEventListener("click", () => {
+  if (mobiledropdown.classList.contains("hidden")) {
+    mobiledropdown.classList.remove("hidden");
+  } else {
+    mobiledropdown.classList.add("hidden");
+  }
+});
+mobilemensbtn.addEventListener("click", () => {
+  if (mobilemenitem.classList.contains("hidden")) {
+    mobilemenitem.classList.remove("hidden");
+  } else {
+    mobilemenitem.classList.toggle("hidden");
+  }
+});
+shopbtn.addEventListener("click", () => {
+  if (dropdown.classList.contains("hidden")) {
+    dropdown.classList.remove("hidden");
+  } else {
+    dropdown.classList.toggle("hidden");
+  }
+});
+mensbtn.addEventListener("click", () => {
+  if (menitem.classList.contains("hidden")) {
+    menitem.classList.remove("hidden");
+  } else {
+    menitem.classList.toggle("hidden");
+  }
+});
 
 searchIcon.addEventListener("click", () => {
   searchbar.classList.remove("hidden");

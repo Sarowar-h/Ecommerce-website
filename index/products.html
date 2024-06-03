@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/6c7a0955d8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/output/output.css" />
+  </head>
+  <body class="font-Poppins">
+    <div
+      class="h-[38px] my-auto mx-auto w-auto bg-slate-900 flex justify-center text-center"
+    >
+      <p
+        class="text-white flex-1 my-auto font-light sm:text-[14px] text-[12px]"
+      >
+        Sign up and get 20% off to your first order.
+        <span class="font-normal underline"> Sign Up Now </span>
+      </p>
+      <i
+        class="fa-solid fa-xmark text-white ml-auto my-auto mr-[20px] sm:mr-[50px]"
+      ></i>
+    </div>
+
+    <header>
+      <nav
+        class="h-[80px] relative max-w-[1240px] content mx-auto flex gap-1 sm:justify-between items-center"
+      >
+        <div id="nav-1" class="flex justify-between gap- items-center">
+          <button class="sm:hidden" id="menulogo">
+            <i class="text-slate-900 pl-5 fa-solid fa-bars fa-lg"></i>
+          </button>
+          <div
+            id="logo"
+            class="font-black cursor-pointer sm:block pl-5 pr-4 text-slate-900 text-[27px] sm:text-[30px]"
+          >
+            <a href="/index/index.html">SHOP.CO</a>
+          </div>
+          <ul
+            id="menu-desk"
+            class="text-[15px] relative hidden font-medium sm:flex gap-4 text-slate-900"
+          >
+            <li id="shopbtn" class="cursor-pointer flex gap-1 justify-center">
+              <a href="#">Shop</a>
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <li class="cursor-pointer"><a href="#"> On Sale</a></li>
+            <li class="cursor-pointer"><a href="#"> New Arrivals</a></li>
+            <li class="cursor-pointer"><a href="#">Brands</a></li>
+          </ul>
+        </div>
+
+        <!-- SEARCHBAR--
+        ------- -->
+        <div
+          id="searchbar"
+          class="sm:block p-3 mx-auto rounded-full gap-1 sm:w-[577px] bg-primary hidden"
+        >
+          <i
+            class="my-auto pl-5 text-slate-600 fa-lg fa-solid fa-magnifying-glass"
+          ></i>
+          <input
+            class="bg-transparent outline-none pl-5"
+            type="text"
+            placeholder="Search for products..."
+          />
+        </div>
+        <div class="flex ml-auto mr-5 gap-5">
+          <button id="crossbar" class="mr-3 hidden sm:hidden">
+            <i class="my-2 text-slate-900 fa-lg fa-solid fa-xmark"></i>
+          </button>
+          <button id="search">
+            <i
+              class="text-slate-900 md:hidden fa-lg fa-solid fa-magnifying-glass"
+            ></i>
+          </button>
+          <button id="shopicon">
+            <i class="text-slate-900 fa-lg fa-solid fa-cart-shopping"></i>
+          </button>
+          <button id="usericon">
+            <i class="text-slate-900 fa-lg fa-solid fa-circle-user"></i>
+          </button>
+        </div>
+      </nav>
+      <div
+        id="dropdown"
+        class="hidden absolute left-[350px] top-28 pb-3 bg-slate-900 shadow-md shadow-slate-200 w-40"
+      >
+        <p
+          id="mensbtn"
+          class="text-white cursor-pointer pl-6 font-medium text-[15px]"
+        >
+          <a href="#"> Men</a>
+          <span
+            ><i class="px-2 fa-solid align-middle fa-xs fa-chevron-right"></i
+          ></span>
+        </p>
+        <p
+          id="menitems"
+          class="text-white hidden pl-7 cursor-pointer bg-slate-700 mb-2 py-2 font-medium text text-[14px]"
+        >
+          <a href="/index/products.html"> T-Shirt</a>
+          <span
+            ><i class="px-2 fa-solid align-middle fa-xs fa-chevron-right"></i
+          ></span>
+        </p>
+
+        <p class="text-white pl-6 font-medium cursor-pointer text text-[15px]">
+          <a href="#"> Women</a>
+          <span
+            ><i class="px-2 fa-solid align-middle fa-xs fa-chevron-right"></i
+          ></span>
+        </p>
+      </div>
+      <div id="mobile-menu" class="m-4 sm:hidden hidden">
+        <ul
+          class="text-[15px] py-5 space-y-3 bg-slate-900 text-white flex-col font-medium sm:flex sm:gap-4 sm:text-slate-900"
+        >
+          <li
+            id="mobileshopbtn"
+            class="flex cursor-pointer accent-violet-100 pl-5 gap-1"
+          >
+            <a href="#"> Shop</a>
+            <span
+              ><i class="align-middle ml-72 fa-solid fa-chevron-down"></i>
+            </span>
+          </li>
+          <div id="mobiledropdown" class="bg-slate-800 space-y-3 gap-2 py-3">
+            <p
+              id="mobilemensbtn"
+              class="text-white cursor-pointer pl-6 font-medium text-[15px]"
+            >
+              <a href="#"> Men</a>
+              <span
+                ><i
+                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
+                ></i
+              ></span>
+            </p>
+            <p
+              id="mobilemenitems"
+              class="text-white cursor-pointer hidden pl-7 bg-slate-700 mb-2 py-2 font-medium text text-[14px]"
+            >
+              <a href="/index/products.html"> T-Shirt</a>
+              <span
+                ><i
+                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
+                ></i
+              ></span>
+            </p>
+
+            <p
+              class="text-white pl-6 cursor-pointer font-medium text text-[15px]"
+            >
+              <a href="#"> Women</a>
+              <span
+                ><i
+                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
+                ></i
+              ></span>
+            </p>
+          </div>
+          <li class="cursor-pointer pl-5"><a href="#"> On Sale</a></li>
+          <li class="cursor-pointer pl-5"><a href="#">New Arrivals</a></li>
+          <li class="cursor-pointer pl-5"><a href="#">Brands</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="md:max-w-7xl mx-auto">
+      <hr
+        class="h-px max-w-[368px] md:max-w-[1200px] text-center mx-auto bg-gray-300 border-0"
+      />
+      <div class="flex items-center gap-3 my-4 px-10">
+        <p>Home</p>
+        <span><i class="fa-solid fa-chevron-right"></i></span>
+        <p>Shop</p>
+        <span><i class="fa-solid fa-chevron-right"></i></span>
+
+        <p>Men</p>
+        <span><i class="fa-solid fa-chevron-right"></i></span>
+        <p>T-shirt</p>
+      </div>
+      <section class="flex flex-col md:flex-row items-center">
+        <div id="productimg" class="hidden md:flex md:flex-1 my-5 ml-8 gap-3">
+          <div class="flex flex-col gap-3">
+            <div>
+              <img
+                src="/image/2nd page/productimg/desktop/image 2-1.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/image/2nd page/productimg/desktop/image 5-1.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/image/2nd page/productimg/desktop/image 6-1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>
+            <img
+              src="/image/2nd page/productimg/desktop/image 1-1.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- mobile part -
+        ----
+      ------------ -->
+        <div id="productimg" class="md:hidden gap-3 flex flex-col items-center">
+          <div>
+            <img src="/image/2nd page/productimg/mobile/image 1.png" alt="" />
+          </div>
+          <div class="flex flex-row md:flex-col gap-3 items-center">
+            <div>
+              <img src="/image/2nd page/productimg/mobile/image 2.png" alt="" />
+            </div>
+            <div>
+              <img src="/image/2nd page/productimg/mobile/image 5.png" alt="" />
+            </div>
+            <div>
+              <img src="/image/2nd page/productimg/mobile/image 6.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col flex-1 items-start mx-8 gap-2">
+          <h1
+            class="text-4xl md:text-[40px] font-black pt-5 md:pt-0 tracking-normal"
+          >
+            ONE LIFE GRAPHIC <br />
+            T-SHIRT
+          </h1>
+          <ul class="flex gap-2">
+            <li class="w-4">
+              <i class="text-yellow-500 fa-solid fa-star"></i>
+            </li>
+            <li class="w-4">
+              <i class="text-yellow-500 fa-solid fa-star"></i>
+            </li>
+            <li class="w-4">
+              <i class="text-yellow-500 fa-solid fa-star"></i>
+            </li>
+            <li class="w-4">
+              <i class="text-yellow-500 fa-solid fa-star"></i>
+            </li>
+            <li class="w-4">
+              <i class="text-yellow-500 fa-solid fa-star-half"></i>
+            </li>
+            <li class="text-[14px]">
+              4.5/ <span class="text-black opacity-60">5</span>
+            </li>
+          </ul>
+          <div class="flex gap-3 items-center">
+            <h1 class="text-[32px] font-bold text-slate-900">$260</h1>
+            <h1 class="text-[32px] font-bold text-black opacity-30">$300</h1>
+            <button
+              class="font-normal text-sm text-[#FF3333] bg-[#FF3333] bg-opacity-10 rounded-full w-16 h-8"
+            >
+              -40%
+            </button>
+          </div>
+          <div>
+            <p class="font-normal text-black opacity-65">
+              This graphic t-shirt which is perfect for any occasion. Crafted
+              from a soft and breathable fabric, it offers superior comfort and
+              style.
+            </p>
+          </div>
+          <hr
+            class="h-px my-2 w-[100%] text-center mx-auto bg-gray-300 border-0"
+          />
+          <div class="flex flex-col gap-3">
+            <p class="font-normal text-black opacity-65">Select Colors</p>
+            <div class="flex gap-2 items-center">
+              <span
+                class="w-[39px] h-[39px] flex items-center justify-center rounded-full bg-[#4F4631]"
+                ><i class="text-white fa-solid fa-check"></i
+              ></span>
+              <span class="w-[39px] h-[39px] rounded-full bg-[#314F4A]"></span>
+              <span class="w-[39px] h-[39px] rounded-full bg-[#31344F]"></span>
+            </div>
+          </div>
+          <hr
+            class="h-px my-2 w-[100%] text-center mx-auto bg-gray-300 border-0"
+          />
+          <div class="flex flex-col gap-3">
+            <div>
+              <p class="font-normal text-black opacity-65">Select Colors</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-[7px] justify-start">
+              <p
+                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                Small
+              </p>
+              <p
+                class="text-smfont-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                Medium
+              </p>
+              <p
+                class="text-sm font-normal text-white px-4 py-2 rounded-full bg-slate-900"
+              >
+                Large
+              </p>
+              <p
+                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                X-Large
+              </p>
+            </div>
+          </div>
+          <hr
+            class="h-px my-2 w-[100%] text-center mx-auto bg-gray-300 border-0"
+          />
+          <div class="flex items-center gap-5">
+            <div
+              class="text-black opacity-65 flex gap-5 justify-between px-6 py-2 rounded-full bg-[#F0F0F0]"
+            >
+              <p class="text-2xl font-medium">-</p>
+              <p class="text-2xl font-medium">1</p>
+              <p class="text-2xl font-medium">+</p>
+            </div>
+            <div class="w-auto">
+              <button
+                class="w-[200px] font-medium text-[15px] py-3 rounded-full text-white bg-slate-900"
+              >
+                Add To Card
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-12">
+        <div
+          class="flex items-center border-b border-slate-300 justify-between"
+        >
+          <div class="h-[50px] w-1/3">
+            <p
+              class="md:text-xl text-sm text-center text-slate-900 opacity-70 font-normal"
+            >
+              Product Details
+            </p>
+          </div>
+          <div class="h-[50px] w-1/3 border-b-2 border-slate-900">
+            <p class="md:text-xl text-sm text-center font-normal">
+              Rating & Reviews
+            </p>
+          </div>
+          <div class="h-[50px] w-1/3">
+            <p
+              class="md:text-xl text-sm text-center font-normal text-slate-900 opacity-70"
+            >
+              FAQs
+            </p>
+          </div>
+        </div>
+        <div class="my-5 mx-5 flex justify-between items-center">
+          <div class="flex items-center gap-1">
+            <h1 class="tex t-xl font-bold text-slate-900">All Reviews</h1>
+            <p class="text-sm font-normal text-slate-400">(450)</p>
+          </div>
+          <div class="flex items-center gap-2 md:gap-3">
+            <span
+              class="w-12 flex items-center justify-center h-12 bg-[#F0F0F0] rounded-full"
+              ><i class="fa-lg fa-solid fa-sliders fa-rotate-90"></i
+            ></span>
+            <span
+              class="md:flex hidden items-center px-5 gap-2 h-12 bg-[#F0F0F0] rounded-full"
+              ><p>Latest</p>
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+            <button
+              class="w-[160px] md:w-[200px] font-medium text-[15px] py-3 rounded-full text-white bg-slate-900"
+            >
+              Write Review
+            </button>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 mx-5 md:mx-0 md:grid-cols-2 md:grid-rows-3 md:gap-x-5 gap-y-5"
+        >
+          <div
+            class="flex flex-col gap-2 p-8 border-[1px] border-slate-300 rounded-2xl"
+          >
+            <div>
+              <ul class="flex gap-1">
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold">
+                Alex K.
+                <span
+                  ><i class="text-green-600 fa-solid fa-circle-check"></i
+                ></span>
+              </h2>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal text-black opacity-65">
+                "Finding clothes that align with my personal style used to be a
+                challenge until I discovered Shop.co. The range of options they
+                offer is truly remarkable, catering to a variety of tastes and
+                occasions.”
+              </p>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal py-4 text-black opacity-65">
+                Posted on August 18, 2023
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col gap-2 p-8 border-[1px] border-slate-300 rounded-2xl"
+          >
+            <div>
+              <ul class="flex gap-1">
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold">
+                Alex K.
+                <span
+                  ><i class="text-green-600 fa-solid fa-circle-check"></i
+                ></span>
+              </h2>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal text-black opacity-65">
+                "Finding clothes that align with my personal style used to be a
+                challenge until I discovered Shop.co. The range of options they
+                offer is truly remarkable, catering to a variety of tastes and
+                occasions.”
+              </p>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal py-4 text-black opacity-65">
+                Posted on August 18, 2023
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col gap-2 p-8 border-[1px] border-slate-300 rounded-2xl"
+          >
+            <div>
+              <ul class="flex gap-1">
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold">
+                Alex K.
+                <span
+                  ><i class="text-green-600 fa-solid fa-circle-check"></i
+                ></span>
+              </h2>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal text-black opacity-65">
+                "Finding clothes that align with my personal style used to be a
+                challenge until I discovered Shop.co. The range of options they
+                offer is truly remarkable, catering to a variety of tastes and
+                occasions.”
+              </p>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal py-4 text-black opacity-65">
+                Posted on August 18, 2023
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col gap-2 p-8 border-[1px] border-slate-300 rounded-2xl"
+          >
+            <div>
+              <ul class="flex gap-1">
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold">
+                Alex K.
+                <span
+                  ><i class="text-green-600 fa-solid fa-circle-check"></i
+                ></span>
+              </h2>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal text-black opacity-65">
+                "Finding clothes that align with my personal style used to be a
+                challenge until I discovered Shop.co. The range of options they
+                offer is truly remarkable, catering to a variety of tastes and
+                occasions.”
+              </p>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal py-4 text-black opacity-65">
+                Posted on August 18, 2023
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col gap-2 p-8 border-[1px] border-slate-300 rounded-2xl"
+          >
+            <div>
+              <ul class="flex gap-1">
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold">
+                Alex K.
+                <span
+                  ><i class="text-green-600 fa-solid fa-circle-check"></i
+                ></span>
+              </h2>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal text-black opacity-65">
+                "Finding clothes that align with my personal style used to be a
+                challenge until I discovered Shop.co. The range of options they
+                offer is truly remarkable, catering to a variety of tastes and
+                occasions.”
+              </p>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal py-4 text-black opacity-65">
+                Posted on August 18, 2023
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col gap-2 p-8 border-[1px] border-slate-300 rounded-2xl"
+          >
+            <div>
+              <ul class="flex gap-1">
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+                <li class="w-5">
+                  <i class="text-yellow-500 fa-solid fa-star"></i>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold">
+                Alex K.
+                <span
+                  ><i class="text-green-600 fa-solid fa-circle-check"></i
+                ></span>
+              </h2>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal text-black opacity-65">
+                "Finding clothes that align with my personal style used to be a
+                challenge until I discovered Shop.co. The range of options they
+                offer is truly remarkable, catering to a variety of tastes and
+                occasions.”
+              </p>
+            </div>
+            <div>
+              <p class="text-[14px] font-normal py-4 text-black opacity-65">
+                Posted on August 18, 2023
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center my-8 items-center">
+          <button
+            class="text-[16px] font-normal py-3 px-8 rounded-xl border border-slate-400"
+          >
+            Load More Reviews
+          </button>
+        </div>
+      </section>
+      <section>
+        <div class="pt-5">
+          <h1 class="text-4xl text-center font-black px-5 tracking-tight">
+            YOU MIGHT ALSO LIKE
+          </h1>
+          <div
+            id="sellcards"
+            class="flex max-w-screen max-h-full p-5 overflow-hidden"
+          >
+            <div id="card" class="mx-auto max-w-screen max-h-[450px] pt-5">
+              <img
+                class="pb-3 max-w-[295px]"
+                src="/image/Frame 33.png"
+                alt=""
+              />
+              <div class="px-5">
+                <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
+                <div class="pt-[10px]">
+                  <ul class="flex gap-2">
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star-half"></i>
+                    </li>
+                    <li class="text-[14px]">
+                      4.5/ <span class="text-black opacity-60">5</span>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
+              </div>
+            </div>
+            <div id="card" class="mx-auto max-w-screen max-h-[450px] pt-5 px-5">
+              <img
+                class="pb-3 max-w-[295px]"
+                src="/image/Frame 32.png"
+                alt=""
+              />
+              <div class="px-5">
+                <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
+                <div class="pt-[10px]">
+                  <ul class="flex gap-2">
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star-half"></i>
+                    </li>
+                    <li class="text-[14px]">
+                      4.5/ <span class="text-black opacity-60">5</span>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
+              </div>
+            </div>
+            <div id="card" class="mx-auto max-w-screen max-h-[450px] pt-5">
+              <img
+                class="pb-3 max-w-[295px]"
+                src="/image/Frame 34.png"
+                alt=""
+              />
+              <div class="px-5">
+                <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
+                <div class="pt-[10px]">
+                  <ul class="flex gap-2">
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star-half"></i>
+                    </li>
+                    <li class="text-[14px]">
+                      4.5/ <span class="text-black opacity-60">5</span>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
+              </div>
+            </div>
+            <div id="card" class="mx-auto max-w-screen max-h-[450px] pt-5 px-5">
+              <img
+                class="pb-3 max-w-[295px]"
+                src="/image/Frame 33.png"
+                alt=""
+              />
+              <div class="px-5">
+                <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
+                <div class="pt-[10px]">
+                  <ul class="flex gap-2">
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star"></i>
+                    </li>
+                    <li class="w-4">
+                      <i class="text-yellow-500 fa-solid fa-star-half"></i>
+                    </li>
+                    <li class="text-[14px]">
+                      4.5/ <span class="text-black opacity-60">5</span>
+                    </li>
+                  </ul>
+                </div>
+                <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button
+              id="buttonview"
+              class="w-5/6 flex items-center justify-center mx-auto md:w-40 font-medium text-[14px] my-4 h-12 rounded-full text-slate-900 bg-white border-[1px] border-slate-400"
+            >
+              View All
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="mx-5 md:mx-auto md:flex md:justify-between md:items-center md:max-w-7xl md:p-10 p-5 bg-slate-900 rounded-2xl"
+      >
+        <div>
+          <h1
+            class="text-4xl md:w-2/3 text-left font-bold text-white py-5 tracking-tight"
+          >
+            STAY UPTO DATE ABOUT OUR LATEST OFFERS
+          </h1>
+        </div>
+        <div class="flex flex-col">
+          <div
+            class="bg-white mx-auto p-5 flex rounded-full items-center w-[311px] h-[42px] gap-5"
+          >
+            <div>
+              <i class="text-black opacity-50 fa-lg fa-regular fa-envelope"></i>
+            </div>
+            <div>
+              <input
+                class="bg-transparent outline-none text-[14px] font-normal text-black opacity-60"
+                type="text"
+                placeholder="Enter your email address"
+              />
+            </div>
+          </div>
+          <div
+            class="bg-white flex justify-center items-center mx-auto mt-3 p-5 rounded-full w-[311px] h-[42px]"
+          >
+            <button class="text-slate-900 opacity-80 font-medium">
+              Subscribe to Newsletter
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="flex flex-col md:flex-row md:justify-between md:items-center mx-5 md:mx-auto md:max-w-7xl pt-5 mb-3"
+      >
+        <div class="w-[250px] md:mt-3 flex flex-col gap-3">
+          <div>
+            <h1
+              class="text-4xl text-left font-black md:pt-0 pt-5 pb-3 tracking-tight"
+            >
+              SHOP.CO
+            </h1>
+          </div>
+          <div>
+            <p class="text-[14px] font-normal text-black opacity-65">
+              We have clothes that suits your style and which you’re proud to
+              wear. From women to men.
+            </p>
+          </div>
+          <div class="flex gap-3 py-7">
+            <i class="fa-xl fa-brands fa-twitter"></i>
+            <i class="fa-xl fa-brands fa-instagram"></i>
+            <i class="fa-xl fa-brands fa-facebook"></i>
+            <i class="fa-xl fa-brands fa-github"></i>
+          </div>
+        </div>
+        <div
+          class="grid md:gap-10 grid-cols-2 md:grid-cols-4 grid-rows-2 md:grid-rows-1"
+        >
+          <div class="my-5">
+            <h2 class="text-lg pb-4 font-medium text-left tracking-wider">
+              COMPANY
+            </h2>
+            <ul
+              class="space-y-3 font-normal text-[16px ] text-black opacity-60"
+            >
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+          <div class="my-5">
+            <h2 class="text-lg pb-4 font-medium text-left tracking-wider">
+              HELP
+            </h2>
+            <ul
+              class="space-y-3 font-normal text-[16px ] text-black opacity-60"
+            >
+              <li>Customer Support</li>
+              <li>Delivery Details</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+
+          <div class="my-5">
+            <h2 class="text-lg pb-4 font-medium text-left tracking-wider">
+              FAQ
+            </h2>
+            <ul
+              class="space-y-3 font-normal text-[16px ] text-black opacity-60"
+            >
+              <li>Account</li>
+              <li>Manage Deliveris</li>
+              <li>Orders</li>
+              <li>Payments</li>
+            </ul>
+          </div>
+          <div class="my-5">
+            <h2 class="text-lg pb-4 font-medium text-left tracking-wider">
+              RESOURCES
+            </h2>
+            <ul
+              class="space-y-3 font-normal text-[16px ] text-black opacity-60"
+            >
+              <li>Free eBooks</li>
+              <li>Devlopment Tutorials</li>
+              <li>How to - Blog</li>
+              <li>Youtube Playlist</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="footer" class="mx-auto md:max-w-7xl">
+        <hr
+          class="h-px max-w-[368px] md:max-w-[1250px] text-center mb-6 mx-auto bg-gray-300 border-0"
+        />
+
+        <div class="flex flex-col md:flex-row items-center md:justify-between">
+          <div>
+            <h2 class="font-normal text-[14px] text-black opacity-60">
+              Shop.co © 2000-2023, All Rights Reserved
+            </h2>
+          </div>
+          <div class="flex py-3">
+            <img src="/image/logo/Badge-1.png" alt="" />
+            <img src="/image/logo/Badge-2.png" alt="" />
+            <img src="/image/logo/Badge-3.png" alt="" />
+            <img src="/image/logo/Badge-4.png" alt="" />
+            <img src="/image/logo/Badge.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
