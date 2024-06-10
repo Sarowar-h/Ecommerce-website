@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/6c7a0955d8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="/output/output.css" />
+  </head>
+  <body class="font-Poppins">
+    <div
+      class="h-[38px] my-auto mx-auto w-auto bg-slate-900 flex justify-center text-center"
+    >
+      <p
+        class="text-white flex-1 my-auto font-light sm:text-[14px] text-[12px]"
+      >
+        Sign up and get 20% off to your first order.
+        <span class="font-normal underline"> Sign Up Now </span>
+      </p>
+      <i
+        class="fa-solid fa-xmark text-white ml-auto my-auto mr-[20px] sm:mr-[50px]"
+      ></i>
+    </div>
+
+    <header>
+      <nav
+        class="h-[80px] relative max-w-[1240px] mx-auto flex gap-1 sm:justify-between items-center"
+      >
+        <div id="nav-1" class="flex justify-between items-center">
+          <button class="sm:hidden" id="menulogo">
+            <i class="text-slate-900 pl-5 fa-solid fa-bars fa-lg"></i>
+          </button>
+          <div
+            id="logo"
+            class="font-black cursor-pointer sm:block pl-5 pr-4 text-slate-900 text-[27px] sm:text-[30px]"
+          >
+            <a href="/index/index.html">SHOP.CO</a>
+          </div>
+          <ul
+            id="menu-desk"
+            class="text-[15px] relative hidden font-medium sm:flex gap-4 text-slate-900"
+          >
+            <li id="shopbtn" class="cursor-pointer flex gap-1 justify-center">
+              <a href="#">Shop</a>
+              <span><i class="fa-solid fa-chevron-down"></i></span>
+            </li>
+            <li class="cursor-pointer"><a href="#"> On Sale</a></li>
+            <li class="cursor-pointer"><a href="#"> New Arrivals</a></li>
+            <li class="cursor-pointer"><a href="#">Brands</a></li>
+          </ul>
+        </div>
+
+        <!-- SEARCHBAR--
+        ------- -->
+        <div
+          id="searchbar"
+          class="sm:block p-3 mx-auto rounded-full gap-1 sm:w-[577px] bg-primary hidden"
+        >
+          <input
+            class="bg-transparent outline-none pl-5"
+            type="text"
+            placeholder="Search for products..."
+          />
+          <i
+            class="my-auto pl-5 text-slate-600 fa-lg fa-solid fa-magnifying-glass"
+          ></i>
+        </div>
+        <div class="flex ml-auto mr-5 gap-5">
+          <button id="crossbar" class="mr-3 hidden sm:hidden">
+            <i class="my-2 text-slate-900 fa-lg fa-solid fa-xmark"></i>
+          </button>
+          <button id="search">
+            <i
+              class="text-slate-900 md:hidden fa-lg fa-solid fa-magnifying-glass"
+            ></i>
+          </button>
+          <button id="shopicon">
+            <i class="text-slate-900 fa-lg fa-solid fa-cart-shopping"></i>
+          </button>
+          <button id="usericon">
+            <i class="text-slate-900 fa-lg fa-solid fa-circle-user"></i>
+          </button>
+        </div>
+      </nav>
+      <div
+        id="dropdown"
+        class="hidden absolute left-[350px] rounded-lg top-28 py-3 bg-slate-900 shadow-md shadow-slate-200 w-40"
+      >
+        <p
+          id="mensbtn"
+          class="text-white cursor-pointer pl-6 font-medium text-[15px]"
+        >
+          <a href="#"> Men</a>
+          <span
+            ><i class="px-2 fa-solid align-middle fa-xs fa-chevron-right"></i
+          ></span>
+        </p>
+        <p
+          id="menitems"
+          class="text-white hidden pl-7 cursor-pointer bg-slate-700 mb-2 py-2 font-medium text text-[14px]"
+        >
+          <a href="/index/products.html"> T-Shirt</a>
+          <span
+            ><i class="px-2 fa-solid align-middle fa-xs fa-chevron-right"></i
+          ></span>
+        </p>
+
+        <p class="text-white pl-6 font-medium cursor-pointer text text-[15px]">
+          <a href="#"> Women</a>
+          <span
+            ><i class="px-2 fa-solid align-middle fa-xs fa-chevron-right"></i
+          ></span>
+        </p>
+      </div>
+      <div id="mobile-menu" class="m-4 sm:hidden hidden">
+        <ul
+          class="text-[15px] py-5 space-y-3 rounded-lg bg-slate-900 text-white flex-col font-medium sm:flex sm:gap-4 sm:text-slate-900"
+        >
+          <li
+            id="mobileshopbtn"
+            class="flex cursor-pointer accent-violet-100 px-5 gap-1"
+          >
+            <a href="#"> Shop</a>
+            <span
+              ><i class="align-middle pr-5 ml-72 fa-solid fa-chevron-down"></i>
+            </span>
+          </li>
+          <div
+            id="mobiledropdown"
+            class="bg-slate-800 hidden space-y-3 gap-2 py-3"
+          >
+            <p
+              id="mobilemensbtn"
+              class="text-white cursor-pointer pl-6 font-medium text-[15px]"
+            >
+              <a href="#"> Men</a>
+              <span
+                ><i
+                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
+                ></i
+              ></span>
+            </p>
+            <p
+              id="mobilemenitems"
+              class="text-white cursor-pointer hidden pl-7 bg-slate-700 mb-2 py-2 font-medium text text-[14px]"
+            >
+              <a href="/index/products.html"> T-Shirt</a>
+              <span
+                ><i
+                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
+                ></i
+              ></span>
+            </p>
+
+            <p
+              class="text-white pl-6 cursor-pointer font-medium text text-[15px]"
+            >
+              <a href="#"> Women</a>
+              <span
+                ><i
+                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
+                ></i
+              ></span>
+            </p>
+          </div>
+          <li class="cursor-pointer pl-5"><a href="#"> On Sale</a></li>
+          <li class="cursor-pointer pl-5"><a href="#">New Arrivals</a></li>
+          <li class="cursor-pointer pl-5"><a href="#">Brands</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="md:max-w-7xl mx-auto">
+      <hr
+        class="h-px max-w-[368px] md:max-w-[1200px] text-center mx-auto bg-gray-300 border-0"
+      />
+      <div class="flex items-center gap-3 my-4 px-10">
+        <p class="text-black opacity-50">Home</p>
+        <span
+          ><i class="text-black opacity-50 fa-solid fa-chevron-right"></i
+        ></span>
+        <p class="text-black opacity-50">Shop</p>
+        <span
+          ><i class="text-black opacity-50 fa-solid fa-chevron-right"></i
+        ></span>
+
+        <p class="text-black opacity-50">Men</p>
+        <span
+          ><i class="text-black opacity-50 fa-solid fa-chevron-right"></i
+        ></span>
+        <p>T-shirt</p>
+      </div>
+    </main>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

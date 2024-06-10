@@ -28,9 +28,9 @@
 
     <header>
       <nav
-        class="h-[80px] relative max-w-[1240px] content mx-auto flex gap-1 sm:justify-between items-center"
+        class="h-[80px] relative max-w-[1240px] mx-auto flex gap-1 sm:justify-between items-center"
       >
-        <div id="nav-1" class="flex justify-between gap- items-center">
+        <div id="nav-1" class="flex justify-between items-center">
           <button class="sm:hidden" id="menulogo">
             <i class="text-slate-900 pl-5 fa-solid fa-bars fa-lg"></i>
           </button>
@@ -88,7 +88,7 @@
       </nav>
       <div
         id="dropdown"
-        class="hidden absolute left-[350px] top-28 pb-3 bg-slate-900 shadow-md shadow-slate-200 w-40"
+        class="hidden absolute left-[350px] rounded-lg top-28 py-3 bg-slate-900 shadow-md shadow-slate-200 w-40"
       >
         <p
           id="mensbtn"
@@ -118,18 +118,21 @@
       </div>
       <div id="mobile-menu" class="m-4 sm:hidden hidden">
         <ul
-          class="text-[15px] py-5 space-y-3 bg-slate-900 text-white flex-col font-medium sm:flex sm:gap-4 sm:text-slate-900"
+          class="text-[15px] py-5 space-y-3 rounded-lg bg-slate-900 text-white flex-col font-medium sm:flex sm:gap-4 sm:text-slate-900"
         >
           <li
             id="mobileshopbtn"
-            class="flex cursor-pointer accent-violet-100 pl-5 gap-1"
+            class="flex cursor-pointer accent-violet-100 px-5 gap-1"
           >
             <a href="#"> Shop</a>
             <span
-              ><i class="align-middle ml-72 fa-solid fa-chevron-down"></i>
+              ><i class="align-middle pr-5 ml-72 fa-solid fa-chevron-down"></i>
             </span>
           </li>
-          <div id="mobiledropdown" class="bg-slate-800 space-y-3 gap-2 py-3">
+          <div
+            id="mobiledropdown"
+            class="bg-slate-800 hidden space-y-3 gap-2 py-3"
+          >
             <p
               id="mobilemensbtn"
               class="text-white cursor-pointer pl-6 font-medium text-[15px]"
@@ -176,15 +179,22 @@
         class="h-px max-w-[368px] md:max-w-[1200px] text-center mx-auto bg-gray-300 border-0"
       />
       <div class="flex items-center gap-3 my-4 px-10">
-        <p>Home</p>
-        <span><i class="fa-solid fa-chevron-right"></i></span>
-        <p>Shop</p>
-        <span><i class="fa-solid fa-chevron-right"></i></span>
+        <p class="text-black opacity-50">Home</p>
+        <span
+          ><i class="text-black opacity-50 fa-solid fa-chevron-right"></i
+        ></span>
+        <p class="text-black opacity-50">Shop</p>
+        <span
+          ><i class="text-black opacity-50 fa-solid fa-chevron-right"></i
+        ></span>
 
-        <p>Men</p>
-        <span><i class="fa-solid fa-chevron-right"></i></span>
+        <p class="text-black opacity-50">Men</p>
+        <span
+          ><i class="text-black opacity-50 fa-solid fa-chevron-right"></i
+        ></span>
         <p>T-shirt</p>
       </div>
+
       <section class="flex flex-col md:flex-row items-center">
         <div id="productimg" class="hidden md:flex md:flex-1 my-5 ml-8 gap-3">
           <div class="flex flex-col gap-3">
@@ -669,154 +679,240 @@
           </button>
         </div>
       </section>
-      <section>
-        <div class="pt-5">
-          <h1 class="text-4xl text-center font-black px-5 tracking-tight">
-            YOU MIGHT ALSO LIKE
-          </h1>
-          <div
-            id="sellcards"
-            class="flex max-w-screen max-h-full p-5 overflow-hidden"
-          >
-            <div id="card" class="mx-auto max-w-screen max-h-[450px] pt-5">
-              <img
-                class="pb-3 max-w-[295px]"
-                src="/image/Frame 33.png"
-                alt=""
-              />
-              <div class="px-5">
-                <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
-                <div class="pt-[10px]">
-                  <ul class="flex gap-2">
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star-half"></i>
-                    </li>
-                    <li class="text-[14px]">
-                      4.5/ <span class="text-black opacity-60">5</span>
-                    </li>
-                  </ul>
-                </div>
-                <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
-              </div>
-            </div>
-            <div id="card" class="mx-auto max-w-screen max-h-[450px] pt-5 px-5">
-              <img
-                class="pb-3 max-w-[295px]"
-                src="/image/Frame 32.png"
-                alt=""
-              />
-              <div class="px-5">
-                <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
-                <div class="pt-[10px]">
-                  <ul class="flex gap-2">
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star-half"></i>
-                    </li>
-                    <li class="text-[14px]">
-                      4.5/ <span class="text-black opacity-60">5</span>
-                    </li>
-                  </ul>
-                </div>
-                <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
-              </div>
-            </div>
-            <div id="card" class="mx-auto max-w-screen max-h-[450px] pt-5">
-              <img
-                class="pb-3 max-w-[295px]"
-                src="/image/Frame 34.png"
-                alt=""
-              />
-              <div class="px-5">
-                <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
-                <div class="pt-[10px]">
-                  <ul class="flex gap-2">
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star-half"></i>
-                    </li>
-                    <li class="text-[14px]">
-                      4.5/ <span class="text-black opacity-60">5</span>
-                    </li>
-                  </ul>
-                </div>
-                <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
-              </div>
-            </div>
-            <div id="card" class="mx-auto max-w-screen max-h-[450px] pt-5 px-5">
-              <img
-                class="pb-3 max-w-[295px]"
-                src="/image/Frame 33.png"
-                alt=""
-              />
-              <div class="px-5">
-                <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
-                <div class="pt-[10px]">
-                  <ul class="flex gap-2">
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star"></i>
-                    </li>
-                    <li class="w-4">
-                      <i class="text-yellow-500 fa-solid fa-star-half"></i>
-                    </li>
-                    <li class="text-[14px]">
-                      4.5/ <span class="text-black opacity-60">5</span>
-                    </li>
-                  </ul>
-                </div>
-                <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
-              </div>
-            </div>
-          </div>
-          <div>
-            <button
-              id="buttonview"
-              class="w-5/6 flex items-center justify-center mx-auto md:w-40 font-medium text-[14px] my-4 h-12 rounded-full text-slate-900 bg-white border-[1px] border-slate-400"
+
+      <!-- making slider ---
+      -----
+    --- -->
+      <div>
+        <h1 class="text-4xl text-center font-black py-5 px-5 tracking-tight">
+          NEW ARRIVALS
+        </h1>
+      </div>
+      <section class="relative flex my-5 items-center md:max-w-7xl">
+        <div class="w-full glide-01">
+          <!-- Slides -->
+          <div class="overflow-hidden" data-glide-el="track">
+            <ul
+              class="relative mx-auto w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]"
             >
-              View All
+              <li class="p-10 md:p-0">
+                <img
+                  src="/image/2nd page/Frame 33.png"
+                  class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
+                />
+                <div class="mx-auto md:pl-5 pl-8 py-3">
+                  <div class="flex flex-col">
+                    <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
+                    <div class="pt-[10px]">
+                      <ul class="flex gap-2">
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star-half"></i>
+                        </li>
+                        <li class="text-[14px]">
+                          4.5/ <span class="text-black opacity-60">5</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="p-10 md:p-0">
+                <img
+                  src="/image/2nd page/Frame 32.png"
+                  class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
+                />
+                <div class="mx-auto md:pl-5 pl-8 py-3">
+                  <div class="flex flex-col">
+                    <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
+                    <div class="pt-[10px]">
+                      <ul class="flex gap-2">
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star-half"></i>
+                        </li>
+                        <li class="text-[14px]">
+                          4.5/ <span class="text-black opacity-60">5</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="p-10 md:p-0">
+                <img
+                  src="/image/2nd page/Frame 38.png"
+                  class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
+                />
+                <div class="mx-auto md:pl-5 pl-8 py-3">
+                  <div class="flex flex-col">
+                    <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
+                    <div class="pt-[10px]">
+                      <ul class="flex gap-2">
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star-half"></i>
+                        </li>
+                        <li class="text-[14px]">
+                          4.5/ <span class="text-black opacity-60">5</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="p-10 md:p-0">
+                <img
+                  src="/image/2nd page/Frame 33.png"
+                  class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
+                />
+                <div class="mx-auto md:pl-5 pl-8 py-3">
+                  <div class="flex flex-col">
+                    <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
+                    <div class="pt-[10px]">
+                      <ul class="flex gap-2">
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star-half"></i>
+                        </li>
+                        <li class="text-[14px]">
+                          4.5/ <span class="text-black opacity-60">5</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="p-10 md:p-0">
+                <img
+                  src="/image/2nd page/Frame 38.png"
+                  class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
+                />
+                <div class="mx-auto md:pl-5 pl-8 py-3">
+                  <div class="flex flex-col">
+                    <h2 class="text-xl font-bold">T-Shirt With Tape Details</h2>
+                    <div class="pt-[10px]">
+                      <ul class="flex gap-2">
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star"></i>
+                        </li>
+                        <li class="w-4">
+                          <i class="text-yellow-500 fa-solid fa-star-half"></i>
+                        </li>
+                        <li class="text-[14px]">
+                          4.5/ <span class="text-black opacity-60">5</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <h2 class="font-bold text-[27px] tracking-wide">$120</h2>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Controls -->
+          <div
+            class="absolute md:hidden px-5 md:px-0 left-0 flex items-center justify-between w-full h-0 top-1/2"
+            data-glide-el="controls"
+          >
+            <button
+              class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20"
+              data-glide-dir="<"
+              aria-label="prev slide"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <title>prev slide</title>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+                />
+              </svg>
+            </button>
+            <button
+              class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-slate-700 border-slate-700 hover:text-slate-900 hover:border-slate-900 focus-visible:outline-none bg-white/20"
+              data-glide-dir=">"
+              aria-label="next slide"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <title>next slide</title>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -958,6 +1054,34 @@
         </div>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+    <script>
+      var glide01 = new Glide(".glide-01", {
+        type: "carousel",
+        focusAt: "center",
+        perView: 4,
+
+        animationDuration: 700,
+        gap: 24,
+        classes: {
+          activeNav: "[&>*]:bg-slate-700",
+        },
+        breakpoints: {
+          1024: {
+            perView: 2,
+          },
+          640: {
+            perView: 1,
+          },
+        },
+      });
+
+      glide01.mount();
+
+      imageZoom("myimage", "myresult");
+    </script>
+    <!-- End Carousel with controls inside -->
+
     <script src="/js/script.js"></script>
   </body>
 </html>

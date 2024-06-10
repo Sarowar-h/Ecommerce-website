@@ -24,7 +24,7 @@ mobileshopbtn.addEventListener("click", () => {
   if (mobiledropdown.classList.contains("hidden")) {
     mobiledropdown.classList.remove("hidden");
   } else {
-    mobiledropdown.classList.add("hidden");
+    mobiledropdown.classList.toggle("hidden");
   }
 });
 mobilemensbtn.addEventListener("click", () => {
@@ -53,7 +53,6 @@ searchIcon.addEventListener("click", () => {
   searchbar.classList.remove("hidden");
   searchbar.style.marginLeft = "50px";
   searchbar.style.paddingRight = "20px";
-  searchbar.classList.toggle("flex-row-reverse");
   mainlogo.classList.toggle("hidden");
   menulogo.classList.toggle("hidden");
   userIcon.classList.toggle("hidden");
@@ -65,7 +64,6 @@ searchIcon.addEventListener("click", () => {
 // cross button work
 crossIcon.addEventListener("click", () => {
   searchbar.classList.toggle("hidden");
-  searchbar.classList.remove("flex-row-reverse");
   mainlogo.classList.remove("hidden");
   menulogo.classList.remove("hidden");
   userIcon.classList.remove("hidden");
@@ -100,3 +98,5 @@ sellbtn.addEventListener("click", () => {
     sellbtn.innerText = "View Less";
   }
 });
+
+// carousel
