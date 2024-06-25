@@ -25,14 +25,15 @@
         class="fa-solid fa-xmark text-white ml-auto my-auto mr-[20px] sm:mr-[50px]"
       ></i>
     </div>
-
     <header>
       <nav
         class="h-[80px] relative max-w-[1240px] mx-auto flex gap-1 sm:justify-between items-center"
       >
         <div id="nav-1" class="flex justify-between items-center">
           <button class="sm:hidden" id="menulogo">
-            <i class="text-slate-900 pl-5 fa-solid fa-bars fa-lg"></i>
+            <i
+              class="text-slate-900 hover:text-slate-500 pl-5 fa-solid fa-bars fa-lg"
+            ></i>
           </button>
           <div
             id="logo"
@@ -58,7 +59,7 @@
         ------- -->
         <div
           id="searchbar"
-          class="sm:block p-3 mx-auto rounded-full gap-1 sm:w-[577px] bg-primary hidden"
+          class="sm:block w-[310px] flex p-3 mx-auto rounded-full gap-1 sm:w-[577px] bg-primary hidden"
         >
           <i
             class="my-auto pl-5 text-slate-600 fa-lg fa-solid fa-magnifying-glass"
@@ -79,7 +80,9 @@
             ></i>
           </button>
           <button id="shopicon">
-            <i class="text-slate-900 fa-lg fa-solid fa-cart-shopping"></i>
+            <a href="/index/cart.html"
+              ><i class="text-slate-900 fa-lg fa-solid fa-cart-shopping"></i
+            ></a>
           </button>
           <button id="usericon">
             <i class="text-slate-900 fa-lg fa-solid fa-circle-user"></i>
@@ -122,12 +125,10 @@
         >
           <li
             id="mobileshopbtn"
-            class="flex cursor-pointer accent-violet-100 px-5 gap-1"
+            class="flex justify-between cursor-pointer accent-violet-100 px-5"
           >
             <a href="#"> Shop</a>
-            <span
-              ><i class="align-middle pr-5 ml-72 fa-solid fa-chevron-down"></i>
-            </span>
+            <span><i class="align-middle fa-solid fa-chevron-down"></i> </span>
           </li>
           <div
             id="mobiledropdown"
@@ -135,41 +136,39 @@
           >
             <p
               id="mobilemensbtn"
-              class="text-white cursor-pointer pl-6 font-medium text-[15px]"
+              class="text-white flex px-6 justify-between cursor-pointer font-medium text-[15px]"
             >
               <a href="#"> Men</a>
-              <span
-                ><i
-                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
-                ></i
-              ></span>
+              <span><i class="fa-solid fa-xs fa-chevron-right"></i></span>
             </p>
             <p
               id="mobilemenitems"
-              class="text-white cursor-pointer hidden pl-7 bg-slate-700 mb-2 py-2 font-medium text text-[14px]"
+              class="text-white flex justify-between cursor-pointer hidden px-6 bg-slate-700 mb-2 py-2 font-medium text text-[14px]"
             >
               <a href="/index/products.html"> T-Shirt</a>
               <span
-                ><i
-                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
-                ></i
+                ><i class="fa-solid align-middle fa-xs fa-chevron-right"></i
               ></span>
             </p>
 
             <p
-              class="text-white pl-6 cursor-pointer font-medium text text-[15px]"
+              class="text-white flex justify-between px-6 cursor-pointer font-medium text text-[15px]"
             >
               <a href="#"> Women</a>
               <span
-                ><i
-                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
-                ></i
+                ><i class="fa-solid align-middle fa-xs fa-chevron-right"></i
               ></span>
             </p>
           </div>
-          <li class="cursor-pointer pl-5"><a href="#"> On Sale</a></li>
-          <li class="cursor-pointer pl-5"><a href="#">New Arrivals</a></li>
-          <li class="cursor-pointer pl-5"><a href="#">Brands</a></li>
+          <li class="cursor-pointer pl-5">
+            <a href="/index/cart.html"> On Sale</a>
+          </li>
+          <li class="cursor-pointer pl-5">
+            <a href="/index/view.html">New Arrivals</a>
+          </li>
+          <li class="cursor-pointer pl-5">
+            <a href="/index/products.html">Brands</a>
+          </li>
         </ul>
       </div>
     </header>
@@ -309,26 +308,26 @@
               <p class="font-normal text-black opacity-65">Select Colors</p>
             </div>
             <div class="flex flex-wrap items-center gap-[7px] justify-start">
-              <p
-                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              <button
+                class="text-sm font-normal hover:bg-slate-300 cursor-pointer text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
               >
                 Small
-              </p>
-              <p
-                class="text-smfont-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              </button>
+              <button
+                class="text-smfont-normal hover:bg-slate-300 cursor-pointer text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
               >
                 Medium
-              </p>
-              <p
-                class="text-sm font-normal text-white px-4 py-2 rounded-full bg-slate-900"
+              </button>
+              <button
+                class="text-sm font-normal hover:bg-slate-700 cursor-pointer text-white px-4 py-2 rounded-full bg-slate-900"
               >
                 Large
-              </p>
-              <p
-                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              </button>
+              <button
+                class="text-sm font-normal hover:bg-slate-300 cursor-pointer text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
               >
                 X-Large
-              </p>
+              </button>
             </div>
           </div>
           <hr
@@ -344,7 +343,7 @@
             </div>
             <div class="w-auto">
               <button
-                class="w-[200px] font-medium text-[15px] py-3 rounded-full text-white bg-slate-900"
+                class="w-[200px] font-medium text-[15px] py-3 hover:bg-slate-700 rounded-full text-white bg-slate-900"
               >
                 Add To Card
               </button>
@@ -352,7 +351,7 @@
           </div>
         </div>
       </section>
-      <section class="mt-12">
+      <section class="mt-12 md:max-w-[1240px] mx-auto">
         <div
           class="flex items-center border-b border-slate-300 justify-between"
         >
@@ -392,7 +391,7 @@
               <i class="fa-solid fa-chevron-down"></i>
             </span>
             <button
-              class="w-[160px] md:w-[200px] font-medium text-[15px] py-3 rounded-full text-white bg-slate-900"
+              class="w-[160px] md:w-[200px] hover:bg-slate-700 font-medium text-[15px] py-3 rounded-full text-white bg-slate-900"
             >
               Write Review
             </button>
@@ -671,9 +670,9 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-center my-8 items-center">
+        <div class="flex justify-center mt-8 items-center">
           <button
-            class="text-[16px] font-normal py-3 px-8 rounded-xl border border-slate-400"
+            class="text-[16px] font-normal text-slate-900 py-3 px-8 hover:bg-slate-900 hover:text-white rounded-xl border border-slate-400"
           >
             Load More Reviews
           </button>
@@ -688,17 +687,19 @@
           NEW ARRIVALS
         </h1>
       </div>
-      <section class="relative flex my-5 items-center md:max-w-7xl">
+      <section
+        class="relative md:px-10 flex mx-auto mb-4 items-center md:max-w-7xl"
+      >
         <div class="w-full glide-01">
           <!-- Slides -->
           <div class="overflow-hidden" data-glide-el="track">
             <ul
               class="relative mx-auto w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]"
             >
-              <li class="p-10 md:p-0">
+              <li class="px-10 md:p-0">
                 <img
                   src="/image/2nd page/Frame 33.png"
-                  class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
+                  class="max-w-[296px] h-[300px] mx-auto md:p-0"
                 />
                 <div class="mx-auto md:pl-5 pl-8 py-3">
                   <div class="flex flex-col">
@@ -729,7 +730,7 @@
                   </div>
                 </div>
               </li>
-              <li class="p-10 md:p-0">
+              <li class="px-10 md:p-0">
                 <img
                   src="/image/2nd page/Frame 32.png"
                   class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
@@ -763,7 +764,7 @@
                   </div>
                 </div>
               </li>
-              <li class="p-10 md:p-0">
+              <li class="px-10 md:p-0">
                 <img
                   src="/image/2nd page/Frame 38.png"
                   class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
@@ -797,7 +798,7 @@
                   </div>
                 </div>
               </li>
-              <li class="p-10 md:p-0">
+              <li class="px-10 md:p-0">
                 <img
                   src="/image/2nd page/Frame 33.png"
                   class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
@@ -831,7 +832,7 @@
                   </div>
                 </div>
               </li>
-              <li class="p-10 md:p-0">
+              <li class="px-10 md:p-0">
                 <img
                   src="/image/2nd page/Frame 38.png"
                   class="max-w-[296px] max-h-[300px] mx-auto md:p-0"
@@ -867,9 +868,10 @@
               </li>
             </ul>
           </div>
+
           <!-- Controls -->
           <div
-            class="absolute md:hidden px-5 md:px-0 left-0 flex items-center justify-between w-full h-0 top-1/2"
+            class="absolute md:hidden px-3 md:px-0 left-0 flex items-center justify-between w-full h-0 top-1/2"
             data-glide-el="controls"
           >
             <button
@@ -917,8 +919,15 @@
           </div>
         </div>
       </section>
+      <div class="flex items-center justify-center max-w-full">
+        <button
+          class="font-medium w-5/6 md:w-40 text-[14px] text-center mb-8 border hover:bg-slate-900 hover:text-white h-12 rounded-full bg-white text-slate-900"
+        >
+          <a href="/index/view.html">View All</a>
+        </button>
+      </div>
       <section
-        class="mx-5 md:mx-auto md:flex md:justify-between md:items-center md:max-w-7xl md:p-10 p-5 bg-slate-900 rounded-2xl"
+        class="md:mx-auto mx-5 mt-5 md:flex md:justify-between md:items-center md:max-w-[1260px] md:p-10 p-5 bg-slate-900 rounded-2xl"
       >
         <div>
           <h1
@@ -945,14 +954,16 @@
           <div
             class="bg-white flex justify-center items-center mx-auto mt-3 p-5 rounded-full w-[311px] h-[42px]"
           >
-            <button class="text-slate-900 opacity-80 font-medium">
+            <button
+              class="text-slate-900 hover:text-slate-800 opacity-80 font-medium"
+            >
               Subscribe to Newsletter
             </button>
           </div>
         </div>
       </section>
       <section
-        class="flex flex-col md:flex-row md:justify-between md:items-center mx-5 md:mx-auto md:max-w-7xl pt-5 mb-3"
+        class="flex flex-col md:flex-row md:justify-between md:items-center mx-5 md:mx-auto md:max-w-[1260px] pt-5 mb-3"
       >
         <div class="w-[250px] md:mt-3 flex flex-col gap-3">
           <div>

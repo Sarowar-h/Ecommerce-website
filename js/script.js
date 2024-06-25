@@ -19,6 +19,11 @@ const mobileshopbtn = document.getElementById("mobileshopbtn");
 const mobiledropdown = document.getElementById("mobiledropdown");
 const mobilemensbtn = document.getElementById("mobilemensbtn");
 const mobilemenitem = document.getElementById("mobilemenitems");
+const filterbtn = document.getElementById("filterbtn");
+const filtermenu = document.getElementById("filtermenu");
+const filterx = document.getElementById("filterx");
+const pagelink = document.getElementById("page-link");
+const horizontalLine = document.getElementById("horizontal-line");
 
 mobileshopbtn.addEventListener("click", () => {
   if (mobiledropdown.classList.contains("hidden")) {
@@ -51,8 +56,6 @@ mensbtn.addEventListener("click", () => {
 
 searchIcon.addEventListener("click", () => {
   searchbar.classList.remove("hidden");
-  searchbar.style.marginLeft = "50px";
-  searchbar.style.paddingRight = "20px";
   mainlogo.classList.toggle("hidden");
   menulogo.classList.toggle("hidden");
   userIcon.classList.toggle("hidden");
@@ -80,23 +83,21 @@ menuIcon.addEventListener("click", () => {
   }
 });
 
-viewbtn.addEventListener("click", () => {
-  if (sellcards.classList.contains("flex-col")) {
-    sellcards.classList.remove("flex-col");
-    viewbtn.innerText = "View All";
-  } else if (sellcards.offsetWidth <= 768) {
-    sellcards.classList.toggle("flex-col");
-    viewbtn.innerText = "View Less";
-  }
-});
-sellbtn.addEventListener("click", () => {
-  if (topcards.classList.contains("flex-col")) {
-    topcards.classList.remove("flex-col");
-    sellbtn.innerText = "View All";
-  } else if (topcards.offsetWidth <= 768) {
-    topcards.classList.toggle("flex-col");
-    sellbtn.innerText = "View Less";
+// =========================================Filter=========================================
+
+filterbtn.addEventListener("click", () => {
+  horizontalLine.classList.toggle("hidden");
+  pagelink.classList.toggle("hidden");
+  if (filtermenu.classList.contains("hidden")) {
+    filtermenu.classList.remove("hidden");
+  } else {
+    filtermenu.classList.toggle("hidden");
   }
 });
 
-// carousel
+filterx.addEventListener("click", () => {
+  filtermenu.classList.toggle("hidden");
+  horizontalLine.classList.remove("hidden");
+
+  pagelink.classList.remove("hidden");
+});

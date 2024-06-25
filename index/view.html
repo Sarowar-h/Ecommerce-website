@@ -32,7 +32,9 @@
       >
         <div id="nav-1" class="flex justify-between items-center">
           <button class="sm:hidden" id="menulogo">
-            <i class="text-slate-900 pl-5 fa-solid fa-bars fa-lg"></i>
+            <i
+              class="text-slate-900 hover:text-slate-500 pl-5 fa-solid fa-bars fa-lg"
+            ></i>
           </button>
           <div
             id="logo"
@@ -58,16 +60,16 @@
         ------- -->
         <div
           id="searchbar"
-          class="sm:block p-3 mx-auto rounded-full gap-1 sm:w-[577px] bg-primary hidden"
+          class="sm:block w-[310px] flex p-3 mx-auto rounded-full gap-1 sm:w-[577px] bg-primary hidden"
         >
+          <i
+            class="my-auto pl-5 text-slate-600 fa-lg fa-solid fa-magnifying-glass"
+          ></i>
           <input
             class="bg-transparent outline-none pl-5"
             type="text"
             placeholder="Search for products..."
           />
-          <i
-            class="my-auto pl-5 text-slate-600 fa-lg fa-solid fa-magnifying-glass"
-          ></i>
         </div>
         <div class="flex ml-auto mr-5 gap-5">
           <button id="crossbar" class="mr-3 hidden sm:hidden">
@@ -79,7 +81,9 @@
             ></i>
           </button>
           <button id="shopicon">
-            <i class="text-slate-900 fa-lg fa-solid fa-cart-shopping"></i>
+            <a href="/index/cart.html"
+              ><i class="text-slate-900 fa-lg fa-solid fa-cart-shopping"></i
+            ></a>
           </button>
           <button id="usericon">
             <i class="text-slate-900 fa-lg fa-solid fa-circle-user"></i>
@@ -122,12 +126,10 @@
         >
           <li
             id="mobileshopbtn"
-            class="flex cursor-pointer accent-violet-100 px-5 gap-1"
+            class="flex justify-between cursor-pointer accent-violet-100 px-5"
           >
             <a href="#"> Shop</a>
-            <span
-              ><i class="align-middle pr-5 ml-72 fa-solid fa-chevron-down"></i>
-            </span>
+            <span><i class="align-middle fa-solid fa-chevron-down"></i> </span>
           </li>
           <div
             id="mobiledropdown"
@@ -135,66 +137,898 @@
           >
             <p
               id="mobilemensbtn"
-              class="text-white cursor-pointer pl-6 font-medium text-[15px]"
+              class="text-white flex px-6 justify-between cursor-pointer font-medium text-[15px]"
             >
               <a href="#"> Men</a>
-              <span
-                ><i
-                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
-                ></i
-              ></span>
+              <span><i class="fa-solid fa-xs fa-chevron-right"></i></span>
             </p>
             <p
               id="mobilemenitems"
-              class="text-white cursor-pointer hidden pl-7 bg-slate-700 mb-2 py-2 font-medium text text-[14px]"
+              class="text-white flex justify-between cursor-pointer hidden px-6 bg-slate-700 mb-2 py-2 font-medium text text-[14px]"
             >
               <a href="/index/products.html"> T-Shirt</a>
               <span
-                ><i
-                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
-                ></i
+                ><i class="fa-solid align-middle fa-xs fa-chevron-right"></i
               ></span>
             </p>
 
             <p
-              class="text-white pl-6 cursor-pointer font-medium text text-[15px]"
+              class="text-white flex justify-between px-6 cursor-pointer font-medium text text-[15px]"
             >
               <a href="#"> Women</a>
               <span
-                ><i
-                  class="px-2 fa-solid align-middle fa-xs fa-chevron-right"
-                ></i
+                ><i class="fa-solid align-middle fa-xs fa-chevron-right"></i
               ></span>
             </p>
           </div>
-          <li class="cursor-pointer pl-5"><a href="#"> On Sale</a></li>
-          <li class="cursor-pointer pl-5"><a href="#">New Arrivals</a></li>
-          <li class="cursor-pointer pl-5"><a href="#">Brands</a></li>
+          <li class="cursor-pointer pl-5">
+            <a href="/index/cart.html"> On Sale</a>
+          </li>
+          <li class="cursor-pointer pl-5">
+            <a href="/index/view.html">New Arrivals</a>
+          </li>
+          <li class="cursor-pointer pl-5">
+            <a href="/index/products.html">Brands</a>
+          </li>
         </ul>
       </div>
     </header>
 
     <main class="md:max-w-7xl mx-auto">
       <hr
+      id="horizontal-line"
         class="h-px max-w-[368px] md:max-w-[1200px] text-center mx-auto bg-gray-300 border-0"
       />
-      <div class="flex items-center gap-3 my-4 px-10">
+      <div id="page-link" class="flex items-center gap-3 my-4 px-5 md:px-10">
         <p class="text-black opacity-50">Home</p>
         <span
           ><i class="text-black opacity-50 fa-solid fa-chevron-right"></i
         ></span>
-        <p class="text-black opacity-50">Shop</p>
-        <span
-          ><i class="text-black opacity-50 fa-solid fa-chevron-right"></i
-        ></span>
-
-        <p class="text-black opacity-50">Men</p>
-        <span
-          ><i class="text-black opacity-50 fa-solid fa-chevron-right"></i
-        ></span>
-        <p>T-shirt</p>
+        <p class="text-black">Casual</p>
       </div>
+
+      <section
+        class="md:max-w-7xl md:mx-10 gap-5 mx-auto md:grid md:grid-cols-4 md:grid-row-1"
+      >
+        <div
+          id="filtermenu"
+          class="border border-slate-300 md:block hidden rounded-2xl p-5 md:col-span-1"
+        >
+          <div class="flex items-center justify-between">
+            <span>
+              <h1 class="text-slate-900 font-bold text-2xl">Filters</h1>
+            </span>
+            <button id="filterx"><i class="fa-solid fa-xmark"></i></i> </button>
+          </div>
+          <hr
+            class="h-px max-w-[368px] my-4 text-center mx-auto bg-gray-300 border-0"
+          />
+          <ul class="text-[16px] space-y-3 px-2 text-black opacity-70">
+            <li class="flex items-center justify-between">
+              <p>T-shirt</p>
+              <span>
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </li>
+            <li class="flex items-center justify-between">
+              <p>Sorts</p>
+              <span>
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </li>
+            <li class="flex items-center justify-between">
+              <p>Shirts</p>
+              <span>
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </li>
+            <li class="flex items-center justify-between">
+              <p>Hoodie</p>
+              <span>
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </li>
+            <li class="flex items-center justify-between">
+              <p>Jeans</p>
+              <span>
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </li>
+          </ul>
+          <hr
+            class="h-px max-w-[368px] my-4 text-center mx-auto bg-gray-300 border-0"
+          />
+
+          <div class="text-center pb-3">
+            <div class="flex items-center justify-between">
+              <span>
+                <h1 class="text-slate-900 font-bold text-2xl">Filters</h1>
+              </span>
+              <span>
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              class="my-3 range range-sm"
+            />
+          </div>
+          <hr
+            class="h-px max-w-[368px]text-center mx-auto bg-gray-300 border-0"
+          />
+          <div class="py-5">
+            <div class="flex pb-3 items-center justify-between">
+              <span>
+                <h1 class="text-slate-900 font-bold text-2xl">Colors</h1>
+              </span>
+              <span>
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+            </div>
+            <ul class="flex flex-wrap gap-3">
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-red-500"
+              ></li>
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-green-500"
+              ></li>
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-yellow-500"
+              ></li>
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-cyan-500"
+              ></li>
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-blue-500"
+              ></li>
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-red-500"
+              ></li>
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-slate-500"
+              ></li>
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-pink-500"
+              ></li>
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-green-500"
+              ></li>
+              <li
+                class="h-[40px] w-[40px] cursor-pointer hover:opacity-70 rounded-full bg-red-500"
+              ></li>
+            </ul>
+          </div>
+          <hr
+            class="h-px max-w-[368px] text-center mx-auto bg-gray-300 border-0"
+          />
+          <div class="py-5">
+            <div class="flex pb-3 items-center justify-between">
+              <span>
+                <h1 class="text-slate-900 font-bold text-2xl">Sizes</h1>
+              </span>
+              <span>
+                <i class="fa-solid fa-angle-down"></i>
+              </span>
+            </div>
+            <div class="flex flex-wrap items-center gap-[7px] justify-start">
+              <p
+                class="text-sm font-normal text-black  opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                Small
+              </p>
+              <p
+                class="text-smfont-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                Medium
+              </p>
+              <p
+                class="text-sm font-normal text-white px-4 py-2 rounded-full bg-slate-900"
+              >
+                Large
+              </p>
+              <p
+                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                X-Large
+              </p>
+              <p
+                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                X-Large
+              </p>
+              <p
+                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                X-Large
+              </p>
+              <p
+                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                X-Large
+              </p>
+              <p
+                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                X-Large
+              </p>
+              <p
+                class="text-sm font-normal text-black opacity-65 px-4 py-2 rounded-full bg-[#F0F0F0]"
+              >
+                X-Large
+              </p>
+            </div>
+          </div>
+          <hr
+            class="h-px max-w-[368px] text-center mx-auto bg-gray-300 border-0"
+          />
+          <div>
+            <div class="py-5">
+              <div class="flex pb-4 items-center justify-between">
+                <span>
+                  <h1 class="text-slate-900 font-bold text-2xl">Sizes</h1>
+                </span>
+                <span>
+                  <i class="fa-solid fa-angle-down"></i>
+                </span>
+              </div>
+              <ul class="text-[16px] space-y-3 px-2 text-black opacity-70">
+                <li class="flex items-center justify-between">
+                  <p>Casual</p>
+                  <span>
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                </li>
+                <li class="flex items-center justify-between">
+                  <p>Formal</p>
+                  <span>
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                </li>
+                <li class="flex items-center justify-between">
+                  <p>Pirty</p>
+                  <span>
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                </li>
+                <li class="flex items-center justify-between">
+                  <p>Gym</p>
+                  <span>
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                </li>
+              </ul>
+              <div class="pt-3">
+                <button
+                  class="w-full py-3 bg-slate-900 hover:bg-slate-600 rounded-full text-white"
+                >
+                  Apply Filter
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-3 px-5 md:px-0 w-full">
+          <div class="flex items-center justify-between">
+            <div class="flex md:gap-[390px] gap-2 items-baseline">
+              <div>
+                <h1 class="text-slate-900 font-bold text-2xl">Casual</h1>
+              </div>
+              <div class="md:flex text-sm gap-1 items-center">
+                <div>Showing 1-10 of 100 Products</div>
+                <div
+                  class="md:flex md:block hidden items-center gap-1 text-base"
+                >
+                  <div>Sort By:</div>
+                  <div class="flex gap-1 items-center text-base font-bold">
+                    <span>Most Popular</span>
+                    <span><i class="fa-solid fa-angle-down"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="md:hidden">
+              <button
+                id="filterbtn"
+                class="w-12 flex items-center justify-center h-12 bg-[#F0F0F0] rounded-full"
+              >
+                <i class="fa-lg fa-solid fa-sliders fa-rotate-90"></i>
+              </button>
+            </div>
+          </div>
+          <div>
+            <div>
+              <ul
+                class="grid grid-cols-2 gap-5 md:gap-0 md:p-0 md:pt-4 pt-5 md:grid-cols-3"
+              >
+                <li class="col-span-1 md:p-0">
+                  <img
+                    src="/image/2nd page/Frame 38.png"
+                    class="max-w-[172px] md:max-w-[270px] max-h-[174px] md:max-h-[283px] md:p-0"
+                  />
+                  <div class="mx-auto">
+                    <div class="flex gap-1 py-2 pl-2 flex-col">
+                      <div>
+                        <h2 class="text-[16px] md:text-[20px] font-bold">
+                          Gradient Graphic T-shirt
+                        </h2>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2 items-center">
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i
+                              class="text-yellow-500 fa-solid fa-star-half"
+                            ></i>
+                          </li>
+                          <li class="text-[14px]">
+                            4.5/ <span class="text-black opacity-60">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="font-bold text-[20px] md:text-[24px] tracking-wide"
+                        >
+                          $120
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="col-span-1 md:p-0">
+                  <img
+                    src="/image/2nd page/Frame 38.png"
+                    class="max-w-[172px] md:max-w-[270px] max-h-[174px] md:max-h-[283px] md:p-0"
+                  />
+                  <div class="mx-auto">
+                    <div class="flex gap-1 py-2 pl-2 flex-col">
+                      <div>
+                        <h2 class="text-[16px] md:text-[20px] font-bold">
+                          Gradient Graphic T-shirt
+                        </h2>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2 items-center">
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i
+                              class="text-yellow-500 fa-solid fa-star-half"
+                            ></i>
+                          </li>
+                          <li class="text-[14px]">
+                            4.5/ <span class="text-black opacity-60">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="font-bold text-[20px] md:text-[24px] tracking-wide"
+                        >
+                          $120
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="col-span-1 md:p-0">
+                  <img
+                    src="/image/2nd page/Frame 38.png"
+                    class="max-w-[172px] md:max-w-[270px] max-h-[174px] md:max-h-[283px] md:p-0"
+                  />
+                  <div class="mx-auto">
+                    <div class="flex gap-1 py-2 pl-2 flex-col">
+                      <div>
+                        <h2 class="text-[16px] md:text-[20px] font-bold">
+                          Gradient Graphic T-shirt
+                        </h2>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2 items-center">
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i
+                              class="text-yellow-500 fa-solid fa-star-half"
+                            ></i>
+                          </li>
+                          <li class="text-[14px]">
+                            4.5/ <span class="text-black opacity-60">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="font-bold text-[20px] md:text-[24px] tracking-wide"
+                        >
+                          $120
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="col-span-1 md:p-0">
+                  <img
+                    src="/image/2nd page/Frame 38.png"
+                    class="max-w-[172px] md:max-w-[270px] max-h-[174px] md:max-h-[283px] md:p-0"
+                  />
+                  <div class="mx-auto">
+                    <div class="flex gap-1 py-2 pl-2 flex-col">
+                      <div>
+                        <h2 class="text-[16px] md:text-[20px] font-bold">
+                          Gradient Graphic T-shirt
+                        </h2>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2 items-center">
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i
+                              class="text-yellow-500 fa-solid fa-star-half"
+                            ></i>
+                          </li>
+                          <li class="text-[14px]">
+                            4.5/ <span class="text-black opacity-60">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="font-bold text-[20px] md:text-[24px] tracking-wide"
+                        >
+                          $120
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="col-span-1 md:p-0">
+                  <img
+                    src="/image/2nd page/Frame 38.png"
+                    class="max-w-[172px] md:max-w-[270px] max-h-[174px] md:max-h-[283px] md:p-0"
+                  />
+                  <div class="mx-auto">
+                    <div class="flex gap-1 py-2 pl-2 flex-col">
+                      <div>
+                        <h2 class="text-[16px] md:text-[20px] font-bold">
+                          Gradient Graphic T-shirt
+                        </h2>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2 items-center">
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i
+                              class="text-yellow-500 fa-solid fa-star-half"
+                            ></i>
+                          </li>
+                          <li class="text-[14px]">
+                            4.5/ <span class="text-black opacity-60">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="font-bold text-[20px] md:text-[24px] tracking-wide"
+                        >
+                          $120
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="col-span-1 md:p-0">
+                  <img
+                    src="/image/2nd page/Frame 38.png"
+                    class="max-w-[172px] md:max-w-[270px] max-h-[174px] md:max-h-[283px] md:p-0"
+                  />
+                  <div class="mx-auto">
+                    <div class="flex gap-1 py-2 pl-2 flex-col">
+                      <div>
+                        <h2 class="text-[16px] md:text-[20px] font-bold">
+                          Gradient Graphic T-shirt
+                        </h2>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2 items-center">
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i
+                              class="text-yellow-500 fa-solid fa-star-half"
+                            ></i>
+                          </li>
+                          <li class="text-[14px]">
+                            4.5/ <span class="text-black opacity-60">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="font-bold text-[20px] md:text-[24px] tracking-wide"
+                        >
+                          $120
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hidden md:block col-span-1 md:p-0">
+                  <img
+                    src="/image/2nd page/Frame 38.png"
+                    class="max-w-[172px] md:max-w-[270px] max-h-[174px] md:max-h-[283px] md:p-0"
+                  />
+                  <div class="mx-auto">
+                    <div class="flex gap-1 py-2 pl-2 flex-col">
+                      <div>
+                        <h2 class="text-[16px] md:text-[20px] font-bold">
+                          Gradient Graphic T-shirt
+                        </h2>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2 items-center">
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i
+                              class="text-yellow-500 fa-solid fa-star-half"
+                            ></i>
+                          </li>
+                          <li class="text-[14px]">
+                            4.5/ <span class="text-black opacity-60">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="font-bold text-[20px] md:text-[24px] tracking-wide"
+                        >
+                          $120
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hidden md:block col-span-1 md:p-0">
+                  <img
+                    src="/image/2nd page/Frame 38.png"
+                    class="max-w-[172px] md:max-w-[270px] max-h-[174px] md:max-h-[283px] md:p-0"
+                  />
+                  <div class="mx-auto">
+                    <div class="flex gap-1 py-2 pl-2 flex-col">
+                      <div>
+                        <h2 class="text-[16px] md:text-[20px] font-bold">
+                          Gradient Graphic T-shirt
+                        </h2>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2 items-center">
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i
+                              class="text-yellow-500 fa-solid fa-star-half"
+                            ></i>
+                          </li>
+                          <li class="text-[14px]">
+                            4.5/ <span class="text-black opacity-60">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="font-bold text-[20px] md:text-[24px] tracking-wide"
+                        >
+                          $120
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="hidden md:block col-span-1 md:p-0">
+                  <img
+                    src="/image/2nd page/Frame 38.png"
+                    class="max-w-[172px] md:max-w-[270px] max-h-[174px] md:max-h-[283px] md:p-0"
+                  />
+                  <div class="mx-auto">
+                    <div class="flex gap-1 py-2 pl-2 flex-col">
+                      <div>
+                        <h2 class="text-[16px] md:text-[20px] font-bold">
+                          Gradient Graphic T-shirt
+                        </h2>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2 items-center">
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i class="text-yellow-500 fa-solid fa-star"></i>
+                          </li>
+                          <li class="w-[13px]">
+                            <i
+                              class="text-yellow-500 fa-solid fa-star-half"
+                            ></i>
+                          </li>
+                          <li class="text-[14px]">
+                            4.5/ <span class="text-black opacity-60">5</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h2
+                          class="font-bold text-[20px] md:text-[24px] tracking-wide"
+                        >
+                          $120
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr
+            class="h-px md:max-w-7xl max-w-[368px] my-5 text-center mx-auto bg-gray-300 border-0"
+          />
+          <div class="flex rounded-xl items-center justify-between">
+            <div
+              class="flex rounded-xl hover:bg-slate-200 items-center gap-3 md:px-5 px-3  md:py-3  py-2 border border-slate-300"
+            >
+              <i class="fa-solid fa-arrow-left"></i><button>Previus</button>
+            </div>
+
+            <div >
+              <ul
+                class="flex md:gap-3 gap-1 items-baseline text-base text-black opacity-60"
+              >
+                <li class="py-3 px-5 rounded-xl bg-slate-200">1</li>
+                <li class="py-3 px-5 rounded-xl hover:bg-slate-200">2</li>
+                <li class="py-3 hidden md:block px-5 rounded-xl hover:bg-slate-200">3</li>
+                <li class="py-3 px-5 rounded-xl hover:bg-slate-200">...</li>
+                <li class="py-3 hidden md:block px-5 rounded-xl hover:bg-slate-200">8</li>
+                <li class="py-3 hidden md:block px-5 rounded-xl hover:bg-slate-200">9</li>
+                <li class="py-3 hidden md:blockpx-5 rounded-xl hover:bg-slate-200">10</li>
+              </ul>
+            </div>
+            <div
+              class="flex rounded-xl hover:bg-slate-200 items-center gap-3 md:px-5 px-3  md:py-3  py-2 border border-slate-300"
+            >
+              <button>Next</button><i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="md:mx-auto mx-5 mt-5 md:flex md:justify-between md:items-center md:max-w-[1240px] md:p-10 p-5 bg-slate-900 rounded-2xl"
+      >
+        <div>
+          <h1
+            class="text-4xl md:w-2/3 text-left font-bold text-white py-5 tracking-tight"
+          >
+            STAY UPTO DATE ABOUT OUR LATEST OFFERS
+          </h1>
+        </div>
+        <div class="flex flex-col">
+          <div
+            class="bg-white mx-auto p-5 flex rounded-full items-center w-[311px] h-[42px] gap-5"
+          >
+            <div>
+              <i class="text-black opacity-50 fa-lg fa-regular fa-envelope"></i>
+            </div>
+            <div>
+              <input
+                class="bg-transparent outline-none text-[14px] font-normal text-black opacity-60"
+                type="text"
+                placeholder="Enter your email address"
+              />
+            </div>
+          </div>
+          <div
+            class="bg-white flex justify-center items-center mx-auto mt-3 p-5 rounded-full w-[311px] h-[42px]"
+          >
+            <button class="text-slate-900 opacity-80 font-medium">
+              Subscribe to Newsletter
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="flex flex-col md:flex-row md:justify-between md:items-center mx-5 md:mx-auto md:max-w-[1240px] pt-5 mb-3"
+      >
+        <div class="w-[250px] md:mt-3 flex flex-col gap-3">
+          <div>
+            <h1
+              class="text-4xl text-left font-black md:pt-0 pt-5 pb-3 tracking-tight"
+            >
+              SHOP.CO
+            </h1>
+          </div>
+          <div>
+            <p class="text-[14px] font-normal text-black opacity-65">
+              We have clothes that suits your style and which you’re proud to
+              wear. From women to men.
+            </p>
+          </div>
+          <div class="flex gap-3 py-7">
+            <i class="fa-xl fa-brands fa-twitter"></i>
+            <i class="fa-xl fa-brands fa-instagram"></i>
+            <i class="fa-xl fa-brands fa-facebook"></i>
+            <i class="fa-xl fa-brands fa-github"></i>
+          </div>
+        </div>
+        <div
+          class="grid md:gap-10 grid-cols-2 md:grid-cols-4 grid-rows-2 md:grid-rows-1"
+        >
+          <div class="my-5">
+            <h2 class="text-lg pb-4 font-medium text-left tracking-wider">
+              COMPANY
+            </h2>
+            <ul
+              class="space-y-3 font-normal text-[16px ] text-black opacity-60"
+            >
+              <li>About</li>
+              <li>Features</li>
+              <li>Works</li>
+              <li>Career</li>
+            </ul>
+          </div>
+          <div class="my-5">
+            <h2 class="text-lg pb-4 font-medium text-left tracking-wider">
+              HELP
+            </h2>
+            <ul
+              class="space-y-3 font-normal text-[16px ] text-black opacity-60"
+            >
+              <li>Customer Support</li>
+              <li>Delivery Details</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+
+          <div class="my-5">
+            <h2 class="text-lg pb-4 font-medium text-left tracking-wider">
+              FAQ
+            </h2>
+            <ul
+              class="space-y-3 font-normal text-[16px ] text-black opacity-60"
+            >
+              <li>Account</li>
+              <li>Manage Deliveris</li>
+              <li>Orders</li>
+              <li>Payments</li>
+            </ul>
+          </div>
+          <div class="my-5">
+            <h2 class="text-lg pb-4 font-medium text-left tracking-wider">
+              RESOURCES
+            </h2>
+            <ul
+              class="space-y-3 font-normal text-[16px ] text-black opacity-60"
+            >
+              <li>Free eBooks</li>
+              <li>Devlopment Tutorials</li>
+              <li>How to - Blog</li>
+              <li>Youtube Playlist</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="footer" class="mx-auto md:max-w-[1240px]">
+        <hr
+          class="h-px max-w-[368px] md:max-w-[1250px] text-center mb-6 mx-auto bg-gray-300 border-0"
+        />
+
+        <div class="flex flex-col md:flex-row items-center md:justify-between">
+          <div>
+            <h2 class="font-normal text-[14px] text-black opacity-60">
+              Shop.co © 2000-2023, All Rights Reserved
+            </h2>
+          </div>
+          <div class="flex py-3">
+            <img src="/image/logo/Badge-1.png" alt="" />
+            <img src="/image/logo/Badge-2.png" alt="" />
+            <img src="/image/logo/Badge-3.png" alt="" />
+            <img src="/image/logo/Badge-4.png" alt="" />
+            <img src="/image/logo/Badge.png" alt="" />
+          </div>
+        </div>
+      </section>
     </main>
+
     <script src="/js/script.js"></script>
   </body>
 </html>
